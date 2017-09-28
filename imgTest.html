@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>picture</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        .img-center {
+            width: 200px;   /*固定显示框的宽、高*/
+            height: 150px;
+            margin: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .img-center img {
+            display: block;
+            position: absolute;
+        }
+        .img-center .aspectFill-x {
+            width: 100%;    /*如果图片本身是偏宽的话，让图片宽度充满显示框，高度上显示垂直最中心*/
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .img-center .aspectFill-y {
+            height: 100%;   /*如果图片本身是偏高的话，让图片高度充满显示框，宽度上显示水平最中心*/
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <section class="img-wrap">
+    <div class="img-center">
+        <img src="file:///Users/joyee/es6/testES6/src/js/img/pic1.jpeg">
+    </div>
+
+    <div class="img-center">
+        <img src="file:///Users/joyee/es6/testES6/src/js/img/pic2.jpeg">
+    </div>
+
+    <div class="img-center">
+        <img src="file:///Users/joyee/es6/testES6/src/js/img/pic3.jpeg">
+    </div>
+
+    <div class="img-center">
+        <img src="file:///Users/joyee/es6/testES6/src/js/img/pic4.jpeg">
+    </div>
+    </section>
+    <script src="require.js" data-main="imgindex"></script>
+</body>
+</html>
+
